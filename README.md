@@ -1,4 +1,4 @@
-# oebb
+# Azure_terraform_infra
 This readme file provides an overview of the Azure Infrastructure created using Terraform scripts. It provides an understanding of the project, its purpose, prerequisites, and how to use it.
 
 ## Project Overview
