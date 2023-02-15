@@ -39,14 +39,6 @@ resource "azurerm_application_gateway" "network" {
   resource_group_name = azurerm_resource_group.rg1.name
   location            = azurerm_resource_group.rg1.location
   
-  
-  /*disable_bgp_route_propagation = false #trying to solve the routing problem by define the route and the priority
-
-route {
-    name           = "route1"
-    address_prefix = "10.1.0.0/16"
-    next_hop_type  = "VnetLocal"
-  }*/
 
   sku {           #check which requirement you need to scale your sku
     name     = "Standard_v2"
