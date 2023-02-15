@@ -28,3 +28,9 @@ resource "azurerm_route_table" "example" {
     next_hop_type  = "VirtualAppliance"
   }
 }
+
+resource "azurerm_firewall_policy" "example" {
+  name                = "pol-chabbi"
+  resource_group_name = "myResourceGroup-chabbi"
+  location            = "westeurope"
+}
