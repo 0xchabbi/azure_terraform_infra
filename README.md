@@ -2,7 +2,7 @@
 This readme file provides an overview of the Azure Infrastructure created using Terraform scripts. It provides an understanding of the project, its purpose, prerequisites, and how to use it.
 
 ## Project Overview
-The project is a set of Terraform scripts that create an infrastructure on Microsoft Azure. The infrastructure includes a virtual network, subnets, security groups, network security groups, and a virtual machine. The virtual machine is configured with an operating system and other software as required.
+The project is a set of Terraform scripts that create an infrastructure on Microsoft Azure. The infrastructure includes a virtual network, subnets, firewall, firewall-policy, application gateway, appservice and a virtual machine. The virtual machine is configured with an operating system and other software as required.
 
 ## Purpose
 The purpose of the project is to provide a template for creating a basic infrastructure on Azure. The scripts are designed to be customized to meet the specific requirements of a project. This provides a faster and more consistent way of creating the infrastructure.
