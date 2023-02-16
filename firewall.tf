@@ -29,7 +29,7 @@ resource "azurerm_firewall" "example" {
 }
 
 
-resource "azurerm_route_table" "example" {
+/*resource "azurerm_route_table" "example" {
   name                          = "route-chabbi"
   location                      = "westeurope"
   resource_group_name           = "myResourceGroup-chabbi"
@@ -41,7 +41,7 @@ resource "azurerm_route_table" "example" {
     next_hop_in_ip_address = "10.21.3.4"
     next_hop_type  = "VirtualAppliance"
   }
-}
+}*/
 
 resource "azurerm_firewall_policy" "example" {
   name                = "pol-chabbi"
@@ -81,7 +81,7 @@ resource "azurerm_firewall_nat_rule_collection" "nat_rule" {
 
 
 
-resource "azurerm_public_ip" "example" {
+/*resource "azurerm_public_ip" "example" {
   name                = "firewall-pip"
   location            = "westeurope"
   resource_group_name = "myResourceGroup-chabbi"
@@ -91,4 +91,4 @@ resource "azurerm_public_ip" "example" {
   tags = {
     environment = "dev"
   }
-}
+}*/
