@@ -32,7 +32,7 @@ resource "azurerm_application_gateway" "network" {
     ]
   }
 
-
+  ## format through shift+crtl+p format document 
   backend_http_settings {
     name                                = var.http_setting_name
     cookie_based_affinity               = "Disabled"

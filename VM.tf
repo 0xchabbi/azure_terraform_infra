@@ -9,6 +9,7 @@ resource "azurerm_network_interface" "example" {
   }
 }
 
+## all data will be encrypted on the disc
 resource "azurerm_disk_encryption_set" "des" {
   name                = "des"
   resource_group_name = azurerm_resource_group.rg1.name
@@ -16,7 +17,7 @@ resource "azurerm_disk_encryption_set" "des" {
   key_vault_key_id    = azurerm_key_vault_key.des-key.id
 
   identity {
-    type = "SystemAssigned"
+    type = "SystemAssigned"  ## user managed identy is preferred. userAssigned
   }
 }
 
@@ -29,7 +30,7 @@ resource "azurerm_linux_virtual_machine" "example" {
   admin_username                  = "chabbi"
   admin_password                  = var.admin_pass
   disable_password_authentication = false
-  encryption_at_host_enabled      = true
+  encryption_at_host_enabled      = true ##
 
   network_interface_ids = [
     azurerm_network_interface.example.id,
@@ -40,7 +41,7 @@ resource "azurerm_linux_virtual_machine" "example" {
     storage_account_type   = "Premium_LRS"
     disk_size_gb           = 30
     name                   = "vm-chabbi_OsDisk_1_b2a3cbd186574a029b7e4cef42a05b26"
-    disk_encryption_set_id = azurerm_disk_encryption_set.des.id
+    disk_encryption_set_id = azurerm_disk_encryption_set.des.id ##
   }
 
   source_image_reference {
