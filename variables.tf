@@ -25,3 +25,7 @@ variable "request_routing_rule_name" {
 variable "redirect_configuration_name" {
     default = "myRedirectConfig"
 }
+
+variable "admin_pass" {
+  description = "The admin Password for the VM"
+}
